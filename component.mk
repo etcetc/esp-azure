@@ -1,9 +1,9 @@
 #
 # Component Makefile
 #
- 
+
 # Component configuration in preprocessor defines
-CFLAGS += -DUSE_LWIP_SOCKET_FOR_AZURE_IOT
+CFLAGS += -DUSE_LWIP_SOCKET_FOR_AZURE_IOT -DNO_LOGGING
 
 COMPONENT_ADD_INCLUDEDIRS := \
 pal \
@@ -18,7 +18,7 @@ azure/serializer/inc \
 azure/umqtt/inc \
 azure/umqtt/inc/azure_umqtt_c \
 azure/deps/parson
- 
+
 COMPONENT_OBJS = \
 azure/c-utility/pal/freertos/lock.o \
 azure/c-utility/pal/dns_async.o \
@@ -98,7 +98,7 @@ azure/serializer/src/schemalib.o \
 azure/serializer/src/schemaserializer.o \
 \
 \
- 
+
 COMPONENT_SRCDIRS := \
 pal/src \
 azure/c-utility/pal \
